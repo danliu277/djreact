@@ -2,12 +2,15 @@ import React from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
 
-import CustomLayout from './containers/layout'
+import CustomLayout from './containers/Layout'
+import ArticleList from './containers/ArticleListView'
 
 function App() {
   return (
     <div className="App">
-      <CustomLayout />
+      <CustomLayout>
+        <ArticleList />
+      </CustomLayout>
     </div>
   );
 }
