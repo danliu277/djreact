@@ -1,6 +1,7 @@
 import React from 'react';
 import { List, Avatar, Space } from 'antd';
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 const Articles = (props) => {
 
@@ -25,7 +26,7 @@ const Articles = (props) => {
             footer={
                 <div>
                     <b>ant design</b> footer part
-      </div>
+                </div>
             }
             renderItem={item => (
                 <List.Item
@@ -45,7 +46,7 @@ const Articles = (props) => {
                 >
                     <List.Item.Meta
                         avatar={<Avatar src={item.avatar} />}
-                        title={<a href={item.href}>{item.title}</a>}
+                        title={<Link to={`/${item.id}`}>{item.title}</Link>}
                         description={item.description}
                     />
                     {item.content}
