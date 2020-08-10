@@ -7,8 +7,8 @@ const ArticleCreate = (props) => {
 
     const submit = (e) => {
         e.preventDefault()
-        
-        axios.post(`http://127.0.0.1:8000/api/`, {title, content})
+
+        axios.post(`http://127.0.0.1:8000/api/articles`, {title, content})
         .then(res => res.json())
         .then(res => console.log(res))
     }
