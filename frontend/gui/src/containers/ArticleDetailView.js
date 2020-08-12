@@ -24,7 +24,11 @@ const ArticleDetail = (props) => {
             <Card title={article.title}>
                 <p>{article.content}</p>
             </Card>
-            <CustomForm />
+            <CustomForm 
+                requestType="put"
+                articleId={props.match.params.articleId}
+                buttonText="Update"
+            />
         </div>
     );
 }

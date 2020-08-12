@@ -41,7 +41,7 @@ const CustomForm = (props) => {
                     <Input name="content" placeholder="Enter some content..." />
                 </Form.Item>
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" >Submit</Button>
+                    <Button type="primary" htmlType="submit" >{props.buttonText}</Button>
                 </Form.Item>
             </Form>
         </>

@@ -20,7 +20,11 @@ const ArticleList = (props) => {
             <Articles data={articles} />
             <br />
             <h2>Create an Article</h2>
-            <CustomForm />
+            <CustomForm 
+                requestType="post"
+                articleId={null}
+                buttonText="Create"
+            />
         </div>
     );
 }
