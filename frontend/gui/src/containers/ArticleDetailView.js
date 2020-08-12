@@ -10,7 +10,7 @@ const ArticleDetail = (props) => {
     useEffect(() => {
         const articleId = props.match.params.articleId
         if (!isNaN(articleId)) {
-            axios.get(`http://127.0.0.1:8000/api/articles/${articleId}`)
+            axios.get(`http://127.0.0.1:8000/api/${articleId}`)
                 .then(res => {
                     setArticle(res.data)
                 })
