@@ -17,14 +17,14 @@ const CustomForm = (props) => {
                     title,
                     content
                 }).then(res => console.log(res))
-                .catch(err => console.err(err))
+                .catch(err => console.error(err))
                 break;
             case 'put':
                 axios.put(`http://localhost:8000/api/${articleId}`, {
                     title,
                     content
                 }).then(res => console.log(res))
-                .catch(err => console.err(err))
+                .catch(err => console.error(err))
                 break;
             default:
                 console.log('default')
