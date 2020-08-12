@@ -3,6 +3,8 @@ import axios from 'axios'
 
 import { Card } from 'antd';
 
+import CustomForm from '../components/Form'
+
 const ArticleDetail = (props) => {
 
     const [article, setArticle] = useState({})
@@ -18,9 +20,12 @@ const ArticleDetail = (props) => {
     }, [props.match.params.articleId])
 
     return (
-        <Card title={article.title}>
-            <p>{article.content}</p>
-        </Card>
+        <div>
+            <Card title={article.title}>
+                <p>{article.content}</p>
+            </Card>
+            <CustomForm />
+        </div>
     );
 }
 
