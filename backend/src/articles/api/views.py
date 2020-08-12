@@ -13,7 +13,7 @@ from rest_framework import viewsets
 
 class ArticleViewSet(viewsets.ModelViewSet):
     serializer_class = ArticleSerializer
-    querysey = Article.objects.all()
+    queryset = Article.objects.all()
 
 
 # class ArticleListView(ListAPIView):
