@@ -3,11 +3,15 @@ from django.urls import path
 from .views import (
     ArticleListView, 
     ArticleDetailView,
-    ArticleCreateView
+    ArticleCreateView,
+    ArticleUpdateView,
+    ArticleDestroyView,
 )
 
 urlpatterns = [
     path('articles/', ArticleListView.as_view()),
     path('articles/create/', ArticleCreateView.as_view()),
     path('articles/<pk>', ArticleDetailView.as_view()),
+    path('articles/<pk>/update/', ArticleUpdateView.as_view()),
+    path('articles/<pk>/delete/', ArticleDestroyView.as_view()),
 ]

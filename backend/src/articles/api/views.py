@@ -2,6 +2,8 @@ from rest_framework.generics import (
     ListAPIView, 
     RetrieveAPIView, 
     CreateAPIView,
+    UpdateAPIView,
+    DestroyAPIView
 )
 
 from articles.models import Article
@@ -19,5 +21,13 @@ class ArticleDetailView(RetrieveAPIView):
 
 
 class ArticleCreateView(CreateAPIView):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+
+class ArticleUpdateView(UpdateAPIView):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+
+class ArticleDestroyView(DestroyAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
