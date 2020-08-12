@@ -20,7 +20,7 @@ const CustomForm = (props) => {
                 .catch(err => console.error(err))
                 break;
             case 'put':
-                axios.put(`http://localhost:8000/api/${articleId}`, {
+                axios.put(`http://localhost:8000/api/${articleId}/`, {
                     title,
                     content
                 }).then(res => console.log(res))
